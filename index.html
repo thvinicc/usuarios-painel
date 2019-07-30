@@ -1,0 +1,64 @@
+
+<html>
+<head>
+  <title>Firebase Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="login_div" class="main-div">
+    <h3>Entrar na minha conta de Classificados</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Fazer Login</button>
+    <p>Crie já sua conta para inserir um anúncio Grátis!</p>
+    <input class="mdl-textfield__input" style="display:inline;width:auto;" type="text" id="email" name="email" placeholder="Email"/>
+    &nbsp;&nbsp;&nbsp;
+    <input class="mdl-textfield__input" style="display:inline;width:auto;" type="password" id="password" name="password" placeholder="Password"/>
+    <br/><br/>
+    <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-up" name="signup">Criar uma conta</button>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <h3>Bem vindo</h3>
+    <div id="conta" class="main-div"></div>
+    <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+    <button onclick="logout()">Logout</button>
+      &nbsp;&nbsp;&nbsp;
+    <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-password-reset" name="verify-email">Redefinir minha senha</button>
+  </div>
+
+ <!-- Container for the demo -->
+ <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-desktop">
+  <div class="mdl-card__title mdl-color--light-blue-600 mdl-color-text--white">
+    <h2 class="mdl-card__title-text">Meu Painel de anúncios &amp; Minha conta:</h2>
+  </div>
+  
+  <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+
+    <!-- Container where we'll display the user details -->
+  </div>
+</div>
+
+</div>
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAJ__mMbW_divMg2SOWJw5QtLcrYZ0wCXI",
+      authDomain: "usuarios-34cab.firebaseapp.com",
+      databaseURL: "https://usuarios-34cab.firebaseio.com",
+      projectId: "usuarios-34cab",
+      storageBucket: "usuarios-34cab.appspot.com",
+      messagingSenderId: "954173988358",
+      appId: "1:954173988358:web:413e7ba15503247c"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="index.js"></script>
+
+</body>
+</html>
